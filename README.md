@@ -20,8 +20,14 @@ cd yourrepository
 
 Create a virtual environment to manage dependencies:
 
+- MacOS
 ```sh
 python3 -m venv venv
+```
+
+- Linux
+```sh
+virtualenv venv
 ```
 
 ### 3. Activate the Virtual Environment
