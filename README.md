@@ -68,7 +68,7 @@ Start the Flask server:
 python3 app.py
 ```
 
-The server will be running at `http://127.0.0.1:5000`.
+The server will be running at `http://127.0.0.1:6000`.
 
 ## Testing the Endpoint
 
@@ -79,7 +79,7 @@ You can use `curl` or Postman to test the endpoint with various review messages.
 #### Payment
 
 ```sh
-curl -X POST http://127.0.0.1:5000/classify_review \
+curl -X POST http://127.0.0.1:6000/classify_review \
     -H "Content-Type: application/json" \
     -d '{"text": "I had issues with the payment processing."}'
 ```
@@ -87,7 +87,7 @@ curl -X POST http://127.0.0.1:5000/classify_review \
 #### Delivery
 
 ```sh
-curl -X POST http://127.0.0.1:5000/classify_review \
+curl -X POST http://127.0.0.1:6000/classify_review \
     -H "Content-Type: application/json" \
     -d '{"text": "The delivery was delayed by two weeks."}'
 ```
@@ -95,7 +95,7 @@ curl -X POST http://127.0.0.1:5000/classify_review \
 #### Product/Merchant
 
 ```sh
-curl -X POST http://127.0.0.1:5000/classify_review \
+curl -X POST http://127.0.0.1:6000/classify_review \
     -H "Content-Type: application/json" \
     -d '{"text": "The product quality is excellent and the merchant was very responsive."}'
 ```
@@ -103,7 +103,7 @@ curl -X POST http://127.0.0.1:5000/classify_review \
 #### Satisfied
 
 ```sh
-curl -X POST http://127.0.0.1:5000/classify_review \
+curl -X POST http://127.0.0.1:6000/classify_review \
     -H "Content-Type: application/json" \
     -d '{"text": "I am very satisfied with my purchase."}'
 ```

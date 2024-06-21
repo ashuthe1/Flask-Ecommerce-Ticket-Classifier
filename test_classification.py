@@ -2,7 +2,7 @@ import requests
 import json
 
 # URL of the Flask endpoint
-url = 'http://127.0.0.1:5000/classify_review'
+url = 'http://127.0.0.1:6000/classify_review'
 
 # Test cases for different categories
 test_cases = {
