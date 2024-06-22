@@ -4,12 +4,10 @@ import json
 from dotenv import load_dotenv
 import os
 
-# Load environment variables from .env file
 load_dotenv()
 
 app = Flask(__name__)
 
-# Retrieve the Google API key from environment variables
 API_KEY = os.getenv('GOOGLE_API_KEY')
 API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent'
 
@@ -42,7 +40,6 @@ def classify_review(text):
 
     result = response.json()
 
-    # Extract the classification from the response
     candidates = result.get("candidates", [])
     if not candidates:
         raise Exception("Failed to extract candidates from response")
@@ -74,6 +71,10 @@ def classify_review_endpoint():
         return jsonify({"classification": classification})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+@app.route('/health', methods=['GET'])
+def health_check():
+    return jsonify({"status": "server is healthy"}), 200
 
 if __name__ == '__main__':
     app.run(port="6000", debug=True)

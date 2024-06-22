@@ -1,10 +1,8 @@
 import requests
 import json
 
-# URL of the Flask endpoint
 url = 'http://127.0.0.1:6000/classify_review'
 
-# Test cases for different categories
 test_cases = {
     "Payment": "I had issues with the payment processing.",
     "Delivery": "The delivery was delayed by two weeks.",
@@ -12,7 +10,6 @@ test_cases = {
     "Satisfied": "I am very satisfied with my purchase."
 }
 
-# Function to test each case
 def test_classification():
     for category, message in test_cases.items():
         payload = json.dumps({"text": message})
