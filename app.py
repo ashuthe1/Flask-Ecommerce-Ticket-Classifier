@@ -11,6 +11,7 @@ app = Flask(__name__)
 
 categories = ["Payment", "Delivery", "Product/Merchant", "Satisfied"]
 
+
 def classify_review_llama(text):
     client = Client(host='http://127.0.0.1:11434')
     
