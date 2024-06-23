@@ -1,6 +1,6 @@
 # E-commerce Review Classification API
 
-This Flask application provides an endpoint to classify e-commerce reviews into predefined categories using the Google PaLM2 API.
+This Flask application provides an endpoint to classify e-commerce reviews into predefined categories using Ollama3 and Gemini API.
 
 ## Prerequisites
 
